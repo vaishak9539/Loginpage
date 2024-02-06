@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:loginpage_/new.dart';
+import 'package:loginpage_/toast_message.dart';
+
 
 
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: New()
+      home: Toast1()
     );
   }
 }
