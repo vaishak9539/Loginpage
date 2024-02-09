@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -99,29 +101,29 @@ class _HomeState extends State<Home> {
                      child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                        children: [
-                        //  InkWell(
-                        //   onTap: (){
-                        //     print('object');
-                        //   },
-                        //    child: Container(
-                        //     height: 40,
-                        //     width: 80,
-                        //     color: Colors.blue,
-                        //     child:const Center(
-                        //       child: Text("Submit",
-                        //       style: TextStyle(
-                        //         fontWeight: FontWeight.bold,
-                        //         color:Colors.white
-                        //         ),
-                        //       ),
-                        //     )
+                         InkWell(
+                          onTap: (){
+                            print('object');
+                          },
+                           child: Container(
+                            height: 40,
+                            width: 80,
+                            color: Colors.blue,
+                            child:const Center(
+                              child: Text("Submit",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color:Colors.white
+                                ),
+                              ),
+                            )
                             
-                        //     ),
-                        //  ),
+                            ),
+                         ),
 
-                        FloatingActionButton(onPressed: (){},
-                        child: Icon(Icons.message),
-                        )
+                        // FloatingActionButton(onPressed: (){},
+                        // child: Icon(Icons.message),
+                        // )
 
                         // IconButton(
                         //   onPressed: (){},
