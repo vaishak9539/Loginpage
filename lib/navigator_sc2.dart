@@ -16,6 +16,7 @@ class _Sc2State extends State<Sc2> {
     return Scaffold(
       body:  SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Screen 2"),
             ElevatedButton(

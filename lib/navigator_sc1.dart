@@ -16,6 +16,7 @@ class _Sc1State extends State<Sc1> {
     return Scaffold(
       body: SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               height: 30,
