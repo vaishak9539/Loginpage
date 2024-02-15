@@ -12,24 +12,40 @@ class _DraState extends State<Dra> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Learn Flutter",style: TextStyle(
+        title:const Text("Learn Flutter",style: TextStyle(
           color: Colors.white,
           ),
           ),
+
+          // *Center Title
           centerTitle: true,
+
+          // *BackgroundColor
         backgroundColor: Colors.deepPurple,
 
-        leading: Icon(Icons.home,
-        color: Colors.white,
-        ),
         actions: [
           IconButton(onPressed: (){}, icon: Icon(Icons.search,color: Colors.white,)),
            IconButton(onPressed: (){}, icon: Icon(Icons.more_vert,color: Colors.white,)),
         ],
+
+        //* Shape
+        shape:const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))
+        ),
+
+        // * Elevation
+        elevation: 30,
+
       ),
       body: Center(
-        child: Text("Home page")
+        child: Card(
+          elevation: 6,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Home page"),
+          ))
         ),
+
         drawer: Drawer(
           child: ListView(
             children:  [
@@ -39,6 +55,7 @@ class _DraState extends State<Dra> {
                 backgroundImage: AssetImage("assets/images/free-images.jpg"),
                ),
                ),
+
                 ListTile(
               leading: const Icon(Icons.person),
               title: const Text('My Account',
@@ -51,6 +68,33 @@ class _DraState extends State<Dra> {
               Navigator.pop(context);
             },
             ),
+
+             ListTile(
+              leading: const Icon(Icons.favorite),
+              title: const Text('favorite',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w600
+              ),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
+            ),
+
+             ListTile(
+              leading: const Icon(Icons.update),
+              title: const Text('update',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w600
+              ),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
+            ),
+            
             ListTile(
               leading: const Icon(Icons.settings),
               title: const Text('Settings',
@@ -63,6 +107,10 @@ class _DraState extends State<Dra> {
               Navigator.pop(context);
             },
             ),
+
+            // *Divider
+             Divider(color: Colors.black26),
+
             ListTile(
               leading: const Icon(Icons.info_outline_rounded),
               title: const Text('About',
@@ -75,6 +123,7 @@ class _DraState extends State<Dra> {
               Navigator.pop(context);
             },
             ),
+            
              ListTile(
               leading: const Icon(Icons.logout),
               title: const Text('Logout',
