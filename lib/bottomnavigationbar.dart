@@ -11,8 +11,10 @@ class Navi extends StatefulWidget {
 
 class _NaviState extends State<Navi> {
 
-    List aa=[Text("data",
-    style: TextStyle(fontSize:20),
+    List aa=[Center(
+      child: Text("Home",
+      style: TextStyle(fontSize:20),
+      ),
     ),
     Vehi(),
     Home(),
@@ -55,6 +57,8 @@ class _NaviState extends State<Navi> {
             ),
          ],
          type: BottomNavigationBarType.shifting,
+        // ! showSelectedLabels: true,
+        showUnselectedLabels: true,
          currentIndex: selectedIndex,
          selectedItemColor: Colors.pink,
          iconSize: 25,

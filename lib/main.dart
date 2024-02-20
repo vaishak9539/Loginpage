@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:loginpage_/check_box.dart';
-import 'package:loginpage_/toast_message.dart';
+import 'package:loginpage_/text_editing_controller.dart';
 
 
 void main() {
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         // useMaterial3: true,
       ),
-      home: Toast1()
+      home: Tec()
     );
   }
 }

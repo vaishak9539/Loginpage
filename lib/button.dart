@@ -12,52 +12,46 @@ class _ButState extends State<But> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              flex: 1,
-              child: Container(
-                width: double.infinity,
-                color: Colors.pink,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(" Clik The Button",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold
+        child: Center(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                TextButton(onPressed: () {}, child: Text("Clik")),
+                FloatingActionButton(
+                  onPressed: () {},
+                  child: Icon(Icons.message),
+                  //! foregroundColor: Colors.white,
+                  //! backgroundColor: Colors.black,
+
+                  //! shape: RoundedRectangleBorder(
+                  //! borderRadius: BorderRadius.circular(30),
+                  //! ),
+
+                  //! tooltip: "Messages",
+                ),
+                ElevatedButton(onPressed: () {}, child: Text("send")),
+                IconButton(onPressed: () {}, icon: Icon(Icons.call)),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    height: 70,
+                    width: 70,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      color: Colors.blue,
                     ),
+                    child: Icon(
+                      Icons.share,
+                      color: Colors.white,
                     ),
-                  ],
+                  ),
                 ),
+                FloatingActionButton.extended(
+                  onPressed: () {},
+                  label: Text("Share"),
+                  icon: Icon(Icons.share),
                 ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                width: double.infinity,
-                color: Colors.white,
-                child:  TextButton(
-              onPressed: (){},
-               child: Text("Clik")
-               ),
-
-              // child: FloatingActionButton(onPressed: (){},
-              //           child: Icon(Icons.message),
-              //           ),
-
-              // child:  ElevatedButton(onPressed: (){},
-              //  child: Icon(Icons.message)
-              //  ),
- 
-
-
-              
-                ),
-            ),
-           
-             
-          ],
+              ]),
         ),
       ),
     );
