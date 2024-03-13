@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:loginpage_/drop_down.dart';
-import 'package:loginpage_/snack_bar.dart';
-import 'package:loginpage_/text_editing_controller.dart';
+import 'package:loginpage_/alert_dialog.dart';
+import 'package:loginpage_/bottomnavigationbar.dart';
+import 'package:loginpage_/validation.dart';
 
 
 void main() {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         // useMaterial3: true,
       ),
-      home: Snackbar1()
+      home: Validation1()
     );
   }
 }

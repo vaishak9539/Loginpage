@@ -55,12 +55,17 @@ class _NaviState extends State<Navi> {
             label: "Account",
             backgroundColor: Colors.green
             ),
+             BottomNavigationBarItem(
+            icon: Icon(Icons.sell),
+            label: "Offers"
+            ),
          ],
          type: BottomNavigationBarType.shifting,
-        // ! showSelectedLabels: true,
-        showUnselectedLabels: true,
+         showSelectedLabels: true,
+        // showUnselectedLabels: true,
          currentIndex: selectedIndex,
          selectedItemColor: Colors.pink,
+         unselectedItemColor: Colors.black,
          iconSize: 25,
          onTap: onItemTapped,
 

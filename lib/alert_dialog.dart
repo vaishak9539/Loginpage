@@ -10,21 +10,31 @@ class Alert extends StatefulWidget {
 }
 
 class _AlertState extends State<Alert> {
+
   void showAlertdialog(){
     showDialog(context: context, builder: (ctx){
       return AlertDialog(
         title: Text("Confirm Exit"),
         content: Text("are you sure you want to exit"),
         actions: [
-          TextButton(onPressed: (){},
-           child: Text("ok"))
+          TextButton(onPressed: (){
+            Navigator.of(context).pop();
+          },
+           child: Text("ok"),
+           ),
         ],
       );
     });
+    
   }
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext ctx) {
     return Scaffold(
+      body: Center(
+        child: ElevatedButton(onPressed: (){
+          showAlertdialog();
+        }, child: Text("Alert Dialog")),
+      ),
 
     );
   }
